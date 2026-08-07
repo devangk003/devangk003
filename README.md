@@ -1,12 +1,12 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/header-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/header-light.svg">
-  <img alt="Devang Kumawat. I design the interface and then ship it myself, in the same repo." src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/header-dark.svg" width="100%">
+  <img alt="Devang Kumawat. I take a surface nobody owns and ship it end to end. Design, engineering, distribution. 2026 Information Science graduate, Bengaluru, India." src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/header-dark.svg" width="100%">
 </picture>
 
 <br>
 
-Frontend, design systems, and the agent underneath. Three startup internships, about eight months total: Useful Ventures (Crewm8.ai), Brixline, and a work trial at OpenTrade (YC S26). 2026 Information Science graduate.
+Three startup internships, about eight months total: Useful Ventures (Crewm8.ai), Brixline, and a work trial at OpenTrade (YC S26). Before that I ran a YouTube channel to 270k views on my own, at 18.
 
 I build the thing, then I go find what's wrong with it. Most of what's below has a number attached because I went and counted.
 
@@ -15,13 +15,13 @@ I build the thing, then I go find what's wrong with it. Most of what's below has
 
 <br>
 
-## Selected work
+## <img src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/ico-work.svg" width="20" align="center" alt=""> &nbsp;Selected work
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-<sub><code>01</code> &nbsp; AGENTS &amp; EVALUATION</sub>
+`AGENTS & EVALUATION`
 
 ### [AstroAgent](https://github.com/devangk003/astroagent)
 An agent built to refuse to make things up
@@ -35,7 +35,7 @@ The judge is a different model family, so it can't rubber-stamp its own output. 
 </td>
 <td width="50%" valign="top">
 
-<sub><code>02</code> &nbsp; PRODUCT &amp; UX RESEARCH</sub>
+`PRODUCT & UX RESEARCH`
 
 ### [Cook-Along Mode](https://github.com/devangk003/recipe-app)
 A recipe app for when your hands are covered in oil
@@ -51,7 +51,7 @@ All 15 lookups in that cook were questions. Nobody set a timer. So the IA splits
 <tr>
 <td width="50%" valign="top">
 
-<sub><code>03</code> &nbsp; AGENT TOOLING &amp; GTM</sub>
+`AGENT TOOLING & GTM`
 
 ### [gtm-agent-skills](https://github.com/devangk003/gtm-agent-skills)
 A go-to-market team, encoded as a skill graph
@@ -65,7 +65,7 @@ The DM helper refuses to write a message it can't ground in a real record. That 
 </td>
 <td width="50%" valign="top">
 
-<sub><code>04</code> &nbsp; FRONTEND &amp; TECHNICAL SEO</sub>
+`FRONTEND & TECHNICAL SEO`
 
 ### [This portfolio](https://devangk003.vercel.app)
 Built to be read by AI search, not just by people
@@ -100,20 +100,23 @@ Then I shipped three case studies on 8 July and forgot to add them to that manif
 
 <br>
 
-## Stack
+## <img src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/ico-stack.svg" width="20" align="center" alt=""> &nbsp;Stack
 
-|  |  |
-|---|---|
-| **Building with** | `TypeScript` `React` `Next.js` `Tailwind` `Python` `LangGraph` `Claude Code` `Codex` |
-| **Also** | `Node.js` `PostgreSQL` `MongoDB` `Docker` `Fly.io` `Stripe` `Three.js` `Remotion` `C++` `C#` `Java` `SQL` |
-| **Design** | `Figma` `design tokens` `Photoshop` `Illustrator` `InDesign` `Affinity` |
-| **Measurement** | `PostHog` `schema.org JSON-LD` `technical SEO` `AEO` |
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/stack-light.svg">
+  <img alt="Build: TypeScript, React, Next.js, Tailwind, Python, Claude Code. Infra and data: Node.js, Docker, Vercel, PostgreSQL, MongoDB, Stripe. Design and measure: Figma, Photoshop, Illustrator, Three.js, PostHog, Git." src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/stack-dark.svg" width="100%">
+</picture>
 
-<br>
+<sub>Also LangGraph, Remotion, C++, C#, Java, SQL, InDesign and Affinity. Design tokens, schema.org JSON-LD, technical SEO and AEO.</sub>
+
+<br><br>
+
+## <img src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/ico-links.svg" width="20" align="center" alt=""> &nbsp;Elsewhere
 
 <table>
 <tr>
-<td width="58%" valign="top">
+<td width="56%" valign="top">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/langs-dark.svg">
@@ -124,12 +127,21 @@ Then I shipped three case studies on 8 July and forgot to add them to that manif
 </td>
 <td valign="top">
 
-**Elsewhere**
+<a href="https://devangk003.vercel.app"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/link-portfolio-dark.svg">
+  <img alt="Portfolio" src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/link-portfolio-light.svg" height="40"></picture></a>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-24292f?style=for-the-badge&logo=vercel&logoColor=white)](https://devangk003.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-24292f?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/devangk003)
-[![X](https://img.shields.io/badge/X-24292f?style=for-the-badge&logo=x&logoColor=white)](https://x.com/devang_kumawat)
-[![Email](https://img.shields.io/badge/Email-24292f?style=for-the-badge&logo=gmail&logoColor=white)](mailto:devangk1403@gmail.com)
+<a href="https://linkedin.com/in/devangk003"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/link-linkedin-dark.svg">
+  <img alt="LinkedIn" src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/link-linkedin-light.svg" height="40"></picture></a>
+
+<a href="https://x.com/devang_kumawat"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/link-x-dark.svg">
+  <img alt="X" src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/link-x-light.svg" height="40"></picture></a>
+
+<a href="mailto:devangk1403@gmail.com"><picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/link-email-dark.svg">
+  <img alt="Email" src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/link-email-light.svg" height="40"></picture></a>
 
 </td>
 </tr>

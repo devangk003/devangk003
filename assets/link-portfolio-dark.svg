@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="168" height="40" viewBox="0 0 168 40" role="img" aria-label="Portfolio">
+  <style>.l { font: 600 13px Inter, "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; }</style>
+  <rect width="168" height="40" rx="10" fill="#131A30" stroke="#222B47"/>
+  <g transform="translate(14 11) scale(0.75)" fill="#EEF1F8"><path d="m12 1.608 12 20.784H0Z"/></g>
+  <text class="l" x="44" y="25" fill="#EEF1F8">Portfolio</text>
+</svg>
