@@ -16,7 +16,7 @@ LangGraph, five tools, six layered safety rails. The evaluation is the point: a 
 32 GTM skills across 6 categories plus a personal DM helper, a dependency DAG, and three CRM adapters. Ran live end to end for $0 in API spend. MIT licensed.
 [Case study](https://devangk003.vercel.app/case-studies/crewm8-gtm-ai-system) · Python
 
-**Cook-Along Mode** · a recipe app for when your hands are covered in oil
+**[Cook-Along Mode](https://github.com/devangk003/recipe-app)** · a recipe app for when your hands are covered in oil
 Not a redesign. A cook test showed a wet finger doesn't register a tap and water on the glass causes uncontrolled scrolling, so the touchscreen is unavailable exactly when it's needed. The IA splits on hand state, driven by a 14-rule voice grammar. The design system sits behind a 241-line build check of 15 assertions that fails CI on a raw hex or an off-scale radius, rather than sitting in a document.
 [Live](https://cookalong-devangk.vercel.app/) · React 19, TypeScript
 
