@@ -4,7 +4,9 @@
   <img alt="Devang Kumawat. I design the interface and then ship it myself, in the same repo." src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/header-dark.svg" width="100%">
 </picture>
 
-Frontend and design systems, AI agents and the evaluation harnesses that make them measurable, and the brand work around both. 2026 Information Science grad. Three startup internships: Useful Ventures (Crewm8.ai), Brixline, and a work trial at OpenTrade (YC S26).
+Frontend, design systems, and the agent underneath. Three startup internships, about eight months total: Useful Ventures (Crewm8.ai), Brixline, and a work trial at OpenTrade (YC S26). 2026 Information Science graduate, Bengaluru.
+
+I build the thing, then I go find what's wrong with it. Most of what's below has a number attached because I went and counted.
 
 **[devangk003.vercel.app →](https://devangk003.vercel.app)**
 
@@ -19,9 +21,9 @@ Frontend and design systems, AI agents and the evaluation harnesses that make th
 ### [AstroAgent](https://github.com/devangk003/astroagent)
 **An agent built to refuse to make things up**
 
-LangGraph, five tools, six layered safety rails. The evaluation is the point: a held-out 30-case set kept disjoint from the guardrail-tuning set, and an LLM-as-judge pointed at a different model family so it can't rubber-stamp its own output.
+LangGraph, five tools, six safety rails. 93% pass on a 30-case held-out set, kept disjoint from the set I tuned the guardrails on. 0% attack-success-rate.
 
-`93% pass` · `0% attack-success-rate`
+The judge is a different model family, so it can't rubber-stamp its own output. It scores tone only. I never let it gate pass or fail.
 
 <sub>Python · LangGraph · [Case study](https://devangk003.vercel.app/case-studies/astro-ai-agent)</sub>
 
@@ -31,9 +33,9 @@ LangGraph, five tools, six layered safety rails. The evaluation is the point: a 
 ### [Cook-Along Mode](https://github.com/devangk003/recipe-app)
 **A recipe app for when your hands are covered in oil**
 
-A cook test showed a wet finger doesn't register a tap, and water on the glass causes uncontrolled scrolling. The touchscreen is unavailable exactly when it's needed, so the IA splits on hand state.
+I recorded a 50-minute cook. A wet finger doesn't register a tap. Water on the glass scrolls the page on its own. So the screen is unusable at the exact moment you need it.
 
-`14-rule voice grammar` · `15 assertions in CI`
+All 15 lookups in that cook were questions. Nobody set a timer. The IA splits on hand state and runs on a 14-rule voice grammar.
 
 <sub>React 19 · TypeScript · [Live](https://cookalong-devangk.vercel.app/)</sub>
 
@@ -43,23 +45,23 @@ A cook test showed a wet finger doesn't register a tap, and water on the glass c
 <td width="50%" valign="top">
 
 ### [gtm-agent-skills](https://github.com/devangk003/gtm-agent-skills)
-**A go-to-market team encoded as a skill graph**
+**A go-to-market team, encoded as a skill graph**
 
-32 GTM skills across 6 categories plus a personal DM helper, a dependency DAG, and three CRM adapters. Sourced, enriched and scored a full outbound campaign end to end.
+32 skills across 6 categories, a dependency DAG, three CRM adapters. Ran it live on 30 leads for $0 in API spend.
 
-`MIT` · `$0 in API spend`
+The DM helper refuses to write a message it can't ground in a real record. That was the point of building it.
 
-<sub>Python · [Case study](https://devangk003.vercel.app/case-studies/crewm8-gtm-ai-system)</sub>
+<sub>MIT · Python · [Case study](https://devangk003.vercel.app/case-studies/crewm8-gtm-ai-system)</sub>
 
 </td>
 <td width="50%" valign="top">
 
 ### [This portfolio](https://devangk003.vercel.app)
-**Built to be readable by AI search, not just by people**
+**Built to be read by AI search, not just by people**
 
-Hand-written `llms.txt`, server-rendered schema.org JSON-LD so crawlers get it without executing JS, and the sitemap and robots rules generated from one route manifest.
+Hand-written `llms.txt`. Schema.org JSON-LD rendered server-side, so a crawler gets it without running JS. Sitemap and robots generate from one route manifest.
 
-`5 AI crawlers allowlisted`
+Then I shipped three case studies on 8 July and forgot to add them to that manifest. No crawler could see them for a month. I caught it diffing the sitemap against the routes.
 
 <sub>Next.js · TypeScript · React Three Fiber</sub>
 
@@ -73,13 +75,13 @@ Hand-written `llms.txt`, server-rendered schema.org JSON-LD so crawlers get it w
 <br>
 
 **[KusPus](https://github.com/devangk003/kuspus)** · local speech-to-text for Windows
-whisper.cpp on the CPU, paste anywhere. Around 860 ms end to end for 3 seconds of audio on `tiny.en`. Fully offline, no account, no telemetry. `C#`
+whisper.cpp on the CPU. About 860 ms end to end for 3 seconds of audio on `tiny.en`. No cloud, no account, no telemetry. `C#`
 
 **[HiveCodex](https://github.com/devangk003/hivecodex)** · real-time collaborative coding
 Monaco, Socket.IO, MongoDB with GridFS, Docker. `TypeScript`
 
 **[GoFetch](https://github.com/devangk003/GoFetch)** · natural-language queries over Indian public datasets
-MongoDB vector search. Hackathon-scale prototype. `TypeScript`
+MongoDB vector search. Hackathon-scale prototype, and it reads like one. `TypeScript`
 
 **[SundayInsurance](https://github.com/devangk003/SundayInsurance)** · vehicle-insurance comparison
 React and Express with a Puppeteer quote scraper. `TypeScript`
@@ -115,7 +117,7 @@ React and Express with a Puppeteer quote scraper. `TypeScript`
 [![X](https://img.shields.io/badge/X-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/devang_kumawat)
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:devangk1403@gmail.com)
 
-<sub>Open to full-time roles. Bengaluru, or remote.</sub>
+<sub>Looking for a full-time role. Bengaluru, or remote.</sub>
 
 </td>
 </tr>
