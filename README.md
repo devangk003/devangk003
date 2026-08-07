@@ -115,7 +115,11 @@ Then I shipped three case studies on 8 July and forgot to add them to that manif
 <tr>
 <td width="58%" valign="top">
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=devangk003&theme=github_dark&hide_border=true&bg_color=00000000&title_color=8b949e&text_color=8b949e&layout=compact&langs_count=8" alt="Most used languages" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/langs-light.svg">
+  <img alt="Languages by bytes: TypeScript 66.1%, Python 12.5%, C# 11.5%, JavaScript 4.7%, HTML 2.0%, CSS 1.8%, Other 1.3%." src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/langs-dark.svg" width="100%">
+</picture>
 
 </td>
 <td valign="top">
