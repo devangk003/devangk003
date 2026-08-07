@@ -4,8 +4,6 @@
   <img alt="Devang Kumawat. I design the interface and then ship it myself, in the same repo." src="https://raw.githubusercontent.com/devangk003/devangk003/main/assets/header-dark.svg" width="100%">
 </picture>
 
-### 
-
 Frontend and design systems, AI agents and the evaluation harnesses that make them measurable, and the brand work around both. 2026 Information Science grad. Three startup internships: Useful Ventures (Crewm8.ai), Brixline, and a work trial at OpenTrade (YC S26).
 
 **[devangk003.vercel.app →](https://devangk003.vercel.app)**
