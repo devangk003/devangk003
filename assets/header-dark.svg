@@ -1,51 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-label="Devang Kumawat. I design the interface and then ship it myself, in the same repo.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="256" viewBox="0 0 1200 256" role="img" aria-label="Devang Kumawat. I design the interface and then ship it myself, in the same repo. TypeScript, React, Next.js, Python, LangGraph, Claude Code. Bengaluru, India.">
   <defs>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+    <pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse">
       <circle cx="1" cy="1" r="1" fill="#e8b339" opacity="0.10"/>
     </pattern>
     <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#0d1117" stop-opacity="0"/>
-      <stop offset="0.62" stop-color="#0d1117" stop-opacity="0.92"/>
+      <stop offset="0.60" stop-color="#0d1117" stop-opacity="0.9"/>
       <stop offset="1" stop-color="#0d1117"/>
     </linearGradient>
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#e8b339"/>
       <stop offset="1" stop-color="#e8b339" stop-opacity="0"/>
     </linearGradient>
+    <style>
+      .n  { font: 700 52px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; letter-spacing: -1.3px; }
+      .t  { font: 400 20px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .m  { font: 400 14px ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.3px; }
+      .s  { font: 400 12px ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: 0.3px; }
+    </style>
   </defs>
 
-  <rect width="1200" height="290" rx="10" fill="#0d1117"/>
-  <rect width="1200" height="290" rx="10" fill="url(#grid)"/>
+  <rect width="1200" height="256" rx="10" fill="#0d1117"/>
+  <rect width="1200" height="256" rx="10" fill="url(#g)"/>
 
-  <!-- node-graph motif: five tools into one agent, with the eval loop back -->
-  <g transform="translate(830 46)" opacity="0.95">
+  <!-- five tools into one agent, with the evaluation loop back -->
+  <g transform="translate(838 28)">
     <g stroke="#30363d" stroke-width="1.5" fill="none">
-      <path d="M60 100 L170 40"/>
-      <path d="M60 100 L170 80"/>
-      <path d="M60 100 L170 120"/>
-      <path d="M60 100 L170 160"/>
-      <path d="M60 100 L170 198"/>
+      <path d="M60 100 L170 40"/><path d="M60 100 L170 80"/><path d="M60 100 L170 120"/>
+      <path d="M60 100 L170 160"/><path d="M60 100 L170 198"/>
     </g>
-    <path d="M170 40 C 250 40 250 198 170 198" stroke="#e8b339" stroke-width="1.5" fill="none" stroke-dasharray="4 5" opacity="0.75"/>
-    <circle cx="60" cy="100" r="13" fill="#e8b339"/>
-    <circle cx="60" cy="100" r="24" fill="none" stroke="#e8b339" stroke-width="1.5" opacity="0.35"/>
+    <path d="M170 40 C 248 40 248 198 170 198" stroke="#e8b339" stroke-width="1.5" fill="none" stroke-dasharray="4 5" opacity="0.75"/>
+    <circle cx="60" cy="100" r="12" fill="#e8b339"/>
+    <circle cx="60" cy="100" r="22" fill="none" stroke="#e8b339" stroke-width="1.5" opacity="0.35"/>
     <g fill="#0d1117" stroke="#8b949e" stroke-width="1.5">
-      <circle cx="170" cy="40" r="7"/>
-      <circle cx="170" cy="80" r="7"/>
-      <circle cx="170" cy="120" r="7"/>
-      <circle cx="170" cy="160" r="7"/>
-      <circle cx="170" cy="198" r="7"/>
+      <circle cx="170" cy="40" r="6.5"/><circle cx="170" cy="80" r="6.5"/><circle cx="170" cy="120" r="6.5"/>
+      <circle cx="170" cy="160" r="6.5"/><circle cx="170" cy="198" r="6.5"/>
     </g>
   </g>
-  <rect x="700" y="0" width="500" height="290" fill="url(#fade)" opacity="0.55"/>
+  <rect x="700" y="0" width="500" height="256" fill="url(#fade)" opacity="0.5"/>
 
-  <rect x="64" y="52" width="64" height="3" rx="1.5" fill="url(#rule)"/>
-
-  <text x="64" y="126" fill="#e6edf3" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="54" font-weight="700" letter-spacing="-1.4">Devang Kumawat</text>
-
-  <text x="64" y="170" fill="#adbac7" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="400">I design the interface and then ship it myself, in the same repo.</text>
-
-  <text x="64" y="222" fill="#8b949e" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="15" letter-spacing="0.3">TypeScript &#183; React &#183; Next.js &#183; Python &#183; LangGraph &#183; Claude Code</text>
-
-  <text x="64" y="252" fill="#6e7681" font-family="ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace" font-size="13" letter-spacing="0.3">Bengaluru, India</text>
+  <rect x="64" y="48" width="56" height="3" rx="1.5" fill="url(#rule)"/>
+  <text class="n" x="64" y="112" fill="#e6edf3">Devang Kumawat</text>
+  <text class="t" x="64" y="154" fill="#adbac7">I design the interface and then ship it myself, in the same repo.</text>
+  <text class="m" x="64" y="194" fill="#8b949e">TypeScript &#183; React &#183; Next.js &#183; Python &#183; LangGraph &#183; Claude Code</text>
+  <text class="s" x="64" y="218" fill="#6e7681">Bengaluru, India</text>
 </svg>
