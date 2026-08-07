@@ -53,59 +53,47 @@ def icon_path(name):
 
 
 # ----------------------------------------------------------------- header
+# Three panels rather than three rules, so the header speaks the same chip
+# language as the stack strip: same radius, same panel fill, same mono label.
+TRACKS = [
+    ("DESIGN", "rose", ["Design systems v1 to v3.", "Brand books and launch campaigns."]),
+    ("ENGINEERING", "teal", ["Frontend, agents, and the", "evaluation harnesses under them."]),
+    ("DISTRIBUTION", "gold", ["270k views on a channel", "I ran solo, at 18."]),
+]
+
+
 def header(theme):
     t = T[theme]
-    W, H = 1200, 404
-    PAD = 64
+    W, H = 1200, 412
+    PAD, GAP = 64, 20
+    PW = (W - 2 * PAD - 2 * GAP) // 3
+    PY_, PH = 236, 108
 
-    # Three tracks. Segment widths stand for versioned artifacts, so the lanes
-    # read as work left behind rather than as a decorative rule.
-    lanes = [
-        ("DESIGN",       t["rose"], [90, 54, 130, 40, 76, 168, 62]),
-        ("ENGINEERING",  t["teal"], [140, 62, 96, 210, 48, 124, 74]),
-        ("DISTRIBUTION", t["gold"], [72, 190, 58, 88, 146, 66, 110]),
-    ]
-
-    LANE_X, LANE_W = 268, W - 268 - PAD
-    y0, step = 248, 44
-    body, css = [], []
-
-    for i, (label, col, segs) in enumerate(lanes):
-        y = y0 + i * step
-        body.append(f'<circle cx="{PAD + 5}" cy="{y - 4}" r="5" fill="{col}"/>')
-        body.append(f'<text class="lb" x="{PAD + 22}" y="{y}" fill="{t["mut"]}">{esc(label)}</text>')
-        body.append(f'<rect x="{LANE_X}" y="{y - 6}" width="{LANE_W}" height="3" rx="1.5" fill="{t["line"]}"/>')
-
-        total = sum(segs) + 9 * (len(segs) - 1)
-        scale = LANE_W / total
-        x = LANE_X
-        for j, s in enumerate(segs):
-            w = s * scale
-            op = 0.95 - (j % 3) * 0.22
-            body.append(f'<rect x="{x:.1f}" y="{y - 6}" width="{w:.1f}" height="3" rx="1.5" '
-                        f'fill="{col}" opacity="{op:.2f}"/>')
-            x += w + 9 * scale
-
-        # A soft highlight travels each lane, staggered. Off-canvas at frame 0.
-        body.append(f'<g clip-path="url(#lane{i})">'
-                    f'<rect class="sw s{i}" x="{LANE_X}" y="{y - 7}" width="150" height="5" '
-                    f'rx="2.5" fill="url(#sh{i})"/></g>')
-        css.append(f'.s{i} {{ animation-delay: {i * 0.9:.1f}s; }}')
-
-    defs = "".join(
-        f'<linearGradient id="sh{i}" x1="0" y1="0" x2="1" y2="0">'
-        f'<stop offset="0" stop-color="{c}" stop-opacity="0"/>'
-        f'<stop offset="0.5" stop-color="{c}" stop-opacity="0.9"/>'
-        f'<stop offset="1" stop-color="{c}" stop-opacity="0"/></linearGradient>'
-        f'<clipPath id="lane{i}"><rect x="{LANE_X}" y="{y0 + i*step - 8}" width="{LANE_W}" height="7"/></clipPath>'
-        for i, (_, c, _) in enumerate(lanes))
+    panels, css = [], []
+    for i, (label, key, lines) in enumerate(TRACKS):
+        col = t[key]
+        x = PAD + i * (PW + GAP)
+        body = [
+            f'<rect x="0" y="0" width="{PW}" height="{PH}" rx="12" fill="{t["panel"]}"/>',
+            f'<rect x="0" y="0" width="{PW}" height="{PH}" rx="12" fill="none" stroke="{t["line"]}"/>',
+            f'<rect x="22" y="24" width="12" height="12" rx="3.5" fill="{col}"/>',
+            f'<text class="lb" x="44" y="34" fill="{col}">{esc(label)}</text>',
+        ]
+        for j, ln in enumerate(lines):
+            body.append(f'<text class="pd" x="22" y="{64 + j * 22}" fill="{t["mut"]}">{esc(ln)}</text>')
+        # a slow bloom on the mark, additive, visible at every frame
+        body.append(f'<circle class="pulse p{i}" cx="28" cy="30" r="16" fill="{col}"/>')
+        css.append(f'.p{i} {{ animation-delay: {i * 1.3:.1f}s; }}')
+        panels.append(f'<g transform="translate({x} {PY_})">{"".join(body)}</g>')
 
     border = (f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="14" fill="none" '
               f'stroke="{t["stroke"]}"/>') if t["stroke"] != "none" else ""
 
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Devang Kumawat. I take a surface nobody owns and ship it end to end. Design, engineering, distribution.">
+    aria = ("Devang Kumawat. I take a surface nobody owns and ship it end to end. "
+            + " ".join(f"{l}: {' '.join(d)}" for l, _, d in TRACKS))
+
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{esc(aria)}">
   <defs>
-    {defs}
     <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="{t["rose"]}" stop-opacity="0.16"/>
       <stop offset="0.5" stop-color="{t["teal"]}" stop-opacity="0.10"/>
@@ -115,26 +103,26 @@ def header(theme):
   <style>
     .nm {{ font: 800 78px {FONT_D}; letter-spacing: -2.6px; }}
     .tg {{ font: 400 21px {FONT_D}; }}
-    .lb {{ font: 500 11px {FONT_M}; letter-spacing: 2px; }}
+    .lb {{ font: 600 11px {FONT_M}; letter-spacing: 2px; }}
+    .pd {{ font: 400 14.5px {FONT_D}; }}
     .mt {{ font: 400 12px {FONT_M}; letter-spacing: 0.4px; }}
 
-    .sw {{ animation: run 9s cubic-bezier(.4,0,.2,1) infinite; }}
-    @keyframes run {{
-      0%   {{ transform: translateX(-220px); }}
-      45%  {{ transform: translateX({LANE_W + 60}px); }}
-      100% {{ transform: translateX({LANE_W + 60}px); }}
+    .pulse {{ opacity: 0; animation: bloom 6s ease-in-out infinite; }}
+    @keyframes bloom {{
+      0%, 70%, 100% {{ opacity: 0; transform: scale(0.5); }}
+      18%           {{ opacity: 0.22; transform: scale(1); }}
     }}
     {" ".join(css)}
-    @media (prefers-reduced-motion: reduce) {{ .sw {{ animation: none; opacity: 0; }} }}
+    @media (prefers-reduced-motion: reduce) {{ .pulse {{ animation: none; }} }}
   </style>
 
   <rect width="{W}" height="{H}" rx="14" fill="{t["bg"]}"/>
   <rect width="{W}" height="{H}" rx="14" fill="url(#glow)"/>
   {border}
 
-  <text class="nm" x="{PAD}" y="132" fill="{t["ink"]}">Devang Kumawat</text>
-  <text class="tg" x="{PAD}" y="180" fill="{t["mut"]}">I take a surface nobody owns and ship it end to end.</text>
-  {"".join(body)}
+  <text class="nm" x="{PAD}" y="136" fill="{t["ink"]}">Devang Kumawat</text>
+  <text class="tg" x="{PAD}" y="184" fill="{t["mut"]}">I take a surface nobody owns and ship it end to end.</text>
+  {"".join(panels)}
   <text class="mt" x="{PAD}" y="{H - 30}" fill="{t["dim"]}">2026 Information Science graduate &#183; Bengaluru, India</text>
 </svg>
 '''
@@ -196,6 +184,9 @@ def strip(theme):
 
 
 # ------------------------------------------------------------ small icons
+AVATAR = open(os.path.join(SP, "avatar64.b64")).read().strip()
+
+
 def chip(name, key, col, label, url_theme):
     """A single link chip: brand icon plus label."""
     t = T[url_theme]
@@ -203,7 +194,7 @@ def chip(name, key, col, label, url_theme):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{esc(label)}">
   <style>.l {{ font: 600 13px {FONT_D}; }}</style>
   <rect width="{W}" height="{H}" rx="10" fill="{t["panel"]}" stroke="{t["line"]}"/>
-  <g transform="translate(14 11) scale(0.75)" fill="{col}"><path d="{icon_path(key)}"/></g>
+  {f'<image x="12" y="8" width="24" height="24" href="data:image/png;base64,{AVATAR}"/>' if key == "__avatar__" else f'<g transform="translate(14 11) scale(0.75)" fill="{col}"><path d="{icon_path(key)}"/></g>'}
   <text class="l" x="44" y="25" fill="{t["ink"]}">{esc(label)}</text>
 </svg>
 '''
@@ -248,7 +239,7 @@ for kind in ("work", "stack", "links"):
     open(p, "w", encoding="utf-8").write(section_icon(kind, "dark"))
     written.append(p)
 
-LINKS = [("portfolio", "vercel", None, "Portfolio"), ("linkedin", "linkedin", "#0A66C2", "LinkedIn"),
+LINKS = [("portfolio", "__avatar__", None, "Portfolio"), ("linkedin", "linkedin", "#0A66C2", "LinkedIn"),
          ("x", "x", None, "X"), ("email", "gmail", "#EA4335", "Email")]
 for theme in ("dark", "light"):
     for slug, key, col, label in LINKS:
